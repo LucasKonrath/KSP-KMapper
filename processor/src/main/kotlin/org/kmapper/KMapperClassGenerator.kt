@@ -57,7 +57,7 @@ class KMapperClassGenerator {
             // converting each value using the converters class.
             val accessors = toCls.primaryConstructor?.parameters?.map {
              param ->
-             "convert(from." + nameMappings[param.name] + " , " + "from." + nameMappings[param.name] + "::class, " + param.type.toString().replace("?", "") +"::class) as " + param.type.toString().replace("?", "")   }
+             "convert(from." + nameMappings[param.name] + "!!, " + "from." + nameMappings[param.name] + "!!::class, " + param.type.toString().replace("?", "") +"::class) as " + param.type.toString().replace("?", "")   }
 
             constructClass.addStatement("return %L( %L )", toCls.simpleName!!, accessors!!.joinToString(", "))
 

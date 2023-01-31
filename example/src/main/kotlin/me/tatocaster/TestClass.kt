@@ -1,7 +1,10 @@
 package me.tatocaster
 
-class TestClass {
-    private val stringProperty = "123"
-    private val intProperty = 456
-    var booleanProperty: Boolean = true
+import me.tatocaster.testClasses.DestinationRecordClass
+import me.tatocaster.testClasses.EmptyConstructorClass
+import org.kmapper.annotation.KMapperDefinition
+
+@KMapperDefinition(from = EmptyConstructorClass::class, to = DestinationRecordClass::class)
+interface TestClass {
+
 }

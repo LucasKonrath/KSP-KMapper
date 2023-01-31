@@ -1,3 +1,3 @@
-package org.kmapper.testClasses
+package me.tatocaster.testClasses
 
 data class DestinationRecordClass(val testString: String, val testInt: Int)

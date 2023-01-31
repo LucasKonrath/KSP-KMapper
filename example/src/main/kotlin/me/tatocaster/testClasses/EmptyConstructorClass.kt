@@ -1,4 +1,4 @@
-package org.kmapper.testClasses
+package me.tatocaster.testClasses
 
 class EmptyConstructorClass {
         var testString: String? = null

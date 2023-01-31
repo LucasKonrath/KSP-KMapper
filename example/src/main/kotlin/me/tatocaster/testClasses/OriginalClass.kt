@@ -1,4 +1,4 @@
-package org.kmapper.testClasses
+package me.tatocaster.testClasses
 
 data class OriginalClass(
         val testString: String,

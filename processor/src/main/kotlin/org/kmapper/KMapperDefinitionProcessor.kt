@@ -22,7 +22,6 @@ class KMapperDefinitionProcessor(
     }
 
     inner class KMapperDefinitionVisitor : KSVisitorVoid() {
-        @OptIn(KspExperimental::class)
         override fun visitClassDeclaration(classDeclaration: KSClassDeclaration, data: Unit) {
             logger.logging("KMapperDefinitionVisitor#visitClassDeclaration : {}", classDeclaration)
             val firstClass = (classDeclaration.annotations.toList().first().arguments.first().value as KSType).declaration.qualifiedName!!.asString()
